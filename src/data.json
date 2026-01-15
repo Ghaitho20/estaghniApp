@@ -1,0 +1,363 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Coca-Cola",
+      "brand": "The Coca-Cola Company",
+      "category": "Boissons",
+      "barcode": "5449000000996",
+      "boycott_status": "boycotté",
+      "boycott_reasons": [
+        "Soutien à Israël",
+        "Exploitation de l'eau",
+        "Impact environnemental"
+      ],
+      "alternatives": ["Boga", "Hamoud Boualem"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 2,
+      "name": "Pepsi",
+      "brand": "PepsiCo",
+      "category": "Boissons",
+      "barcode": "012000000638",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Exploitation des ressources"],
+      "alternatives": ["Boga", "Boissons artisanales"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 3,
+      "name": "Nestlé Pure Life",
+      "brand": "Nestlé",
+      "category": "Eau embouteillée",
+      "barcode": "7613034626844",
+      "boycott_status": "boycotté",
+      "boycott_reasons": [
+        "Privatisation de l'eau",
+        "Exploitation des ressources",
+        "Travail des enfants"
+      ],
+      "alternatives": ["Safia", "Lalla Khadija", "Ain Saiss"],
+      "country_origin": "Suisse"
+    },
+    {
+      "id": 4,
+      "name": "KitKat",
+      "brand": "Nestlé",
+      "category": "Chocolat",
+      "barcode": "7613031357987",
+      "boycott_status": "boycotté",
+      "boycott_reasons": [
+        "Travail des enfants",
+        "Déforestation",
+        "Exploitation"
+      ],
+      "alternatives": ["Chocolat local artisanal"],
+      "country_origin": "Suisse"
+    },
+    {
+      "id": 5,
+      "name": "Nescafé",
+      "brand": "Nestlé",
+      "category": "Café",
+      "barcode": "7613033509808",
+      "boycott_status": "boycotté",
+      "boycott_reasons": [
+        "Travail des enfants",
+        "Exploitation des agriculteurs"
+      ],
+      "alternatives": ["Café Boncolac", "Café Zitouna"],
+      "country_origin": "Suisse"
+    },
+    {
+      "id": 6,
+      "name": "Starbucks Coffee",
+      "brand": "Starbucks",
+      "category": "Café",
+      "barcode": "7613287078216",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Anti-syndicalisme"],
+      "alternatives": ["Cafés locaux", "Café équitable"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 7,
+      "name": "McDonald's",
+      "brand": "McDonald's Corporation",
+      "category": "Fast-food",
+      "barcode": "N/A",
+      "boycott_status": "boycotté",
+      "boycott_reasons": [
+        "Soutien à Israël",
+        "Exploitation des travailleurs",
+        "Santé publique"
+      ],
+      "alternatives": ["Restaurants locaux", "Street food tunisien"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 8,
+      "name": "KFC",
+      "brand": "Yum! Brands",
+      "category": "Fast-food",
+      "barcode": "N/A",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Bien-être animal"],
+      "alternatives": ["GAT Restaurant", "Poulet local"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 9,
+      "name": "Pizza Hut",
+      "brand": "Yum! Brands",
+      "category": "Fast-food",
+      "barcode": "N/A",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël"],
+      "alternatives": ["Pizzerias locales"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 10,
+      "name": "Burger King",
+      "brand": "Restaurant Brands International",
+      "category": "Fast-food",
+      "barcode": "N/A",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël"],
+      "alternatives": ["Burgers locaux artisanaux"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 11,
+      "name": "Danone Activia",
+      "brand": "Danone",
+      "category": "Produits laitiers",
+      "barcode": "3033490001001",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Présence en Israël", "Greenwashing"],
+      "alternatives": ["Délice", "Vitalait", "Yaourts artisanaux"],
+      "country_origin": "France"
+    },
+    {
+      "id": 12,
+      "name": "Häagen-Dazs",
+      "brand": "Nestlé/General Mills",
+      "category": "Glaces",
+      "barcode": "3415581196504",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Prix excessifs"],
+      "alternatives": ["Glaces Carthage", "Mister Ice"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 13,
+      "name": "Maggi",
+      "brand": "Nestlé",
+      "category": "Condiments",
+      "barcode": "7613033489518",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Nestlé - exploitation"],
+      "alternatives": ["Épices locales", "Bouillons maison"],
+      "country_origin": "Suisse"
+    },
+    {
+      "id": 14,
+      "name": "Pringles",
+      "brand": "Kellogg's",
+      "category": "Snacks",
+      "barcode": "5053827147408",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Santé"],
+      "alternatives": ["Bimo", "Vico"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 15,
+      "name": "Lay's",
+      "brand": "PepsiCo",
+      "category": "Snacks",
+      "barcode": "028400047319",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël"],
+      "alternatives": ["Bimo", "Vico"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 16,
+      "name": "Doritos",
+      "brand": "PepsiCo",
+      "category": "Snacks",
+      "barcode": "028400047180",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël"],
+      "alternatives": ["Snacks locaux"],
+      "country_origin": "États-Unis"
+    },
+    {
+      "id": 17,
+      "name": "Lipton",
+      "brand": "Unilever",
+      "category": "Thé",
+      "barcode": "8722700188032",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Exploitation"],
+      "alternatives": ["Thé vert tunisien", "Thés artisanaux"],
+      "country_origin": "Royaume-Uni"
+    },
+    {
+      "id": 18,
+      "name": "Dove",
+      "brand": "Unilever",
+      "category": "Cosmétiques",
+      "barcode": "8712561844703",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Tests sur animaux"],
+      "alternatives": ["Savon Medina", "Savon Beldi"],
+      "country_origin": "Royaume-Uni"
+    },
+    {
+      "id": 19,
+      "name": "Axe",
+      "brand": "Unilever",
+      "category": "Cosmétiques",
+      "barcode": "8710908330001",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël"],
+      "alternatives": ["Parfums naturels", "Produits locaux"],
+      "country_origin": "Royaume-Uni"
+    },
+    {
+      "id": 20,
+      "name": "L'Oréal Paris",
+      "brand": "L'Oréal",
+      "category": "Cosmétiques",
+      "barcode": "3600523307951",
+      "boycott_status": "boycotté",
+      "boycott_reasons": ["Soutien à Israël", "Tests sur animaux"],
+      "alternatives": ["Cosmétiques naturels"],
+      "country_origin": "France"
+    },
+    {
+      "id": 111,
+      "name": "Boga Lim",
+      "brand": "SFBT (Boga)",
+      "category": "Boissons",
+      "barcode": "6191509000011",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 112,
+      "name": "Boga Cidre",
+      "brand": "SFBT (Boga)",
+      "category": "Boissons",
+      "barcode": "6191509000028",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 114,
+      "name": "Safia Eau Minérale",
+      "brand": "Groupe Safia",
+      "category": "Eau",
+      "barcode": "6191440000012",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 115,
+      "name": "Ain Garci",
+      "brand": "SNDP",
+      "category": "Eau",
+      "barcode": "6191437000019",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 117,
+      "name": "Délice Lait",
+      "brand": "Délice Holding",
+      "category": "Produits laitiers",
+      "barcode": "6191510100013",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 118,
+      "name": "Délice Yaourt",
+      "brand": "Délice Holding",
+      "category": "Produits laitiers",
+      "barcode": "6191510100020",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 122,
+      "name": "Bimo Chips",
+      "brand": "Bimo",
+      "category": "Snacks",
+      "barcode": "6191505000017",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 123,
+      "name": "Vico Chips",
+      "brand": "Vico",
+      "category": "Snacks",
+      "barcode": "6191506000014",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 133,
+      "name": "Café Boncolac",
+      "brand": "Boncolac",
+      "category": "Café",
+      "barcode": "6191530000014",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 136,
+      "name": "Chocolat Première",
+      "brand": "Première",
+      "category": "Chocolat",
+      "barcode": "6191540000015",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 143,
+      "name": "Savon Medina",
+      "brand": "Medina",
+      "category": "Cosmétiques",
+      "barcode": "6191560000014",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    },
+    {
+      "id": 157,
+      "name": "Glaces Carthage",
+      "brand": "Carthage",
+      "category": "Glaces",
+      "barcode": "6191590000010",
+      "boycott_status": "non boycotté",
+      "country_origin": "Tunisie",
+      "tunisian_product": true
+    }
+  ]
+}
