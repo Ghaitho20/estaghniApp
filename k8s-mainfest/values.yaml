@@ -1,16 +1,16 @@
 replicaCount: 1
 
 image:
-  repository: estaghni        # ton image locale
-  tag: latest
-  pullPolicy: IfNotPresent   # très important pour Minikube
+  repository: estaghni      # nom de ton image locale
+  tag: latest               # tag utilisé lors du build Docker local
+  pullPolicy: IfNotPresent  # important pour Minikube
 
 service:
   type: ClusterIP
   port: 3000
 
 ingress:
-  enabled: false  # on fera l’HTTPS plus tard avec Ingress si besoin
+  enabled: false
 
 resources:
   limits:

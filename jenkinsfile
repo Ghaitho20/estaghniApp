@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "estaghni"
-        IMAGE_TAG  = "${BUILD_NUMBER}"
+        IMAGE_NAME   = "estaghni"
+        IMAGE_TAG    = "latest"              // Toujours latest pour Minikube
         SCANNER_HOME = tool 'sonar-scanner'
     }
 
@@ -44,6 +44,12 @@ pipeline {
             }
         }
 
+        stage('Set Docker Env for Minikube') {
+            steps {
+                sh 'eval $(minikube docker-env)'   // IMPORTANT : Docker local de Minikube
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh """
@@ -76,14 +82,34 @@ pipeline {
             }
         }
 
-        stage('Deploy to Minikube (Helm)') {
-            steps {
-                sh """
-                eval \$(minikube docker-env)
-                helm upgrade --install k8s-manifest ./k8s-mainfest \
-                --set image.tag=${IMAGE_TAG}
-                """
-            }
+        stage('Deploy to Kubernetes (Helm)') {
+    steps {
+        sh '''
+        # Utiliser Docker local de Minikube
+        eval $(minikube docker-env)
+
+        # Vérifier si le release Helm existe
+        if helm list -q | grep -w k8s-manifest; then
+            echo "Helm release existe, upgrade avec nouvelle image"
+            helm upgrade k8s-manifest ./k8s-mainfest \
+                --set image.tag=latest
+        else
+            echo "Helm release n'existe pas, installation"
+            helm install k8s-manifest ./k8s-mainfest \
+                --set image.tag=latest
+        fi
+
+        # Vérifier les pods
+        kubectl get pods
+        '''
+    }
+}
+
+    }
+
+    post {
+        always {
+            echo "Pipeline terminé."
         }
     }
 }
