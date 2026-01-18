@@ -410,9 +410,14 @@ const BoycottApp = () => {
                       </h4>
                       <div className="flex flex-wrap gap-4">
                         {selectedProduct.alternatives.map((alt, idx) => (
-                          <span key={idx} className="px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-base font-black shadow-xl hover:scale-110 hover:rotate-2 transition-transform cursor-pointer animate-bounceIn" style={{ animationDelay: `${idx * 0.1}s` }}>
-                            ✅ {alt}
-                          </span>
+                          <span
+  key={idx}
+  className="opacity-100 px-6 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-base font-black shadow-xl hover:scale-110 hover:rotate-2 transition-transform cursor-pointer animate-bounceIn"
+  style={{ animationDelay: `${idx * 0.1}s` }}
+>
+  ✅ {alt}
+</span>
+
                         ))}
                       </div>
                     </div>

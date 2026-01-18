@@ -3,19 +3,13 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copier les fichiers de dépendances
 COPY package.json ./
-
-# Installer les dépendances
 RUN npm install
-
-# Copier le code source
 COPY . .
 
-# Build l'application React
 RUN npm run build
 
-# Stage 2: Runtime (Sécurisé)
+# Stage 2: Runtime
 FROM node:18-alpine
 
 # Créer un utilisateur non-root
@@ -24,24 +18,29 @@ RUN addgroup -g 1001 -S nodejs && \
 
 WORKDIR /app
 
-# Installer un serveur HTTP léger (serve)
-RUN npm install -g serve
+# Installer serve et openssl
+RUN apk add --no-cache openssl bash && npm install -g serve
 
 # Copier le build depuis le stage précédent
 COPY --from=builder --chown=nodejs:nodejs /app/build ./build
-
-# Copier les fichiers publics avec les bonnes permissions
 COPY --chown=nodejs:nodejs public ./public
+
+# Générer certificat auto-signé pour HTTPS et changer propriétaire/droits
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /app/key.pem \
+    -out /app/cert.pem \
+    -subj "/CN=localhost/O=localhost" && \
+    chown nodejs:nodejs /app/key.pem /app/cert.pem && \
+    chmod 600 /app/key.pem /app/cert.pem
 
 # Passer à l'utilisateur non-root
 USER nodejs
 
-# Exposer le port
 EXPOSE 3000
 
-# Healthcheck
+# Healthcheck sur HTTPS
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
+  CMD node -e "require('https').get('https://localhost:3000', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
 
-# Lancer l'app
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Lancer l'app avec HTTPS
+CMD ["serve", "-s", "build", "-l", "3000", "--ssl-cert", "/app/cert.pem", "--ssl-key", "/app/key.pem"]
